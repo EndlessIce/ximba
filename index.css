@@ -1,0 +1,241 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	font-size: 62.5%;
+
+	--clr-1: rgb(231, 233, 234);
+	--clr-2: rgb(113, 118, 123);
+	--clr-3: rgb(249, 24, 128);
+	--clr-4: rgb(0, 186, 124);
+	--clr-5: rgb(29, 161, 242);
+	--clr-6: rgb(47, 51, 54);
+	--clr-7: rgb(0, 0, 0);
+	--clr-8: rgba(255, 255, 255, 0.2);
+	--clr-9: rgba(255, 50, 50);
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--clr-7);
+	color: var(--clr-1);
+}
+
+/* typography and icons */
+
+.h1 {
+	font-size: 2.5rem;
+}
+
+i {
+	color: var(--clr-2);
+}
+
+.fa-comment-dots,
+.fa-heart,
+.fa-retweet {
+	font-size: 1.5rem;
+	color: inherit;
+	pointer-events: none;
+}
+
+.fa-xmark {
+	align-self: flex-end;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.liked {
+	color: var(--clr-3);
+}
+
+.reposted {
+	color: var(--clr-4);
+}
+
+/* layout */
+
+.main,
+.header {
+	margin: 0 auto;
+	border-left: 0.05rem solid var(--clr-6);
+	border-right: 0.05rem solid var(--clr-6);
+}
+
+.header {
+	padding: 1.6rem;
+}
+
+.new-post-input-area {
+	align-items: flex-start;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* textareas + btn */
+
+.textarea {
+	margin: 0 0 2rem 0;
+	padding: 1rem;
+	height: 6rem;
+	font-size: 2rem;
+	font-family: 'Roboto', sans-serif;
+	line-height: 3rem;
+	border: none;
+	outline: none;
+	resize: none;
+	background-color: var(--clr-7);
+	color: var(--clr-1);
+}
+
+.btn {
+	align-self: flex-end;
+	margin-top: 2rem;
+	padding: 1rem 1.9rem;
+	font-size: 2rem;
+	font-weight: 600;
+	border-radius: 2rem;
+	border: none;
+	background-color: var(--clr-5);
+	color: var(--clr-1);
+	cursor: pointer;
+}
+
+.btn-delete {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 1.3rem;
+	background-color: var(--clr-3);
+}
+
+/* post */
+
+.post {
+	position: relative;
+	padding: 0 2rem;
+}
+
+.post-inner {
+	padding: 2rem 0;
+}
+
+.post-reactions {
+	align-items: center;
+	gap: 2rem;
+	font-size: 1.3rem;
+	color: var(--clr-2);
+	user-select: none;
+}
+
+.post-reaction {
+	align-items: center;
+	gap: 0.4rem;
+	cursor: pointer;
+}
+
+.post-reply {
+	margin: 0 0 0 4rem;
+}
+
+.post-handle {
+	font-size: 1.5rem;
+	color: var(--clr-2);
+}
+
+.post-delete {
+	font-size: 1.5rem;
+	color: var(--clr-9);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.post-text {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+/* images */
+
+.profile-pic {
+	width: 4.8rem;
+	border-radius: 50%;
+}
+
+/* reply modal */
+
+.reply-modal {
+	display: none;
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	height: fit-content;
+	background-color: var(--clr-7);
+	border-radius: 1.6rem;
+	z-index: 1000;
+}
+
+.reply-modal .post {
+	padding: 0 0 2rem;
+	border: none;
+}
+
+.reply-modal-bg {
+	display: none;
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--clr-8);
+	z-index: 500;
+}
+
+.reply-input-area {
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* utility classes */
+
+.flex {
+	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.gap-1 {
+	gap: 1rem;
+}
+
+.align-flex-start {
+	align-items: flex-start;
+}
+
+.justify-space-between {
+	justify-content: space-between;
+}
+
+.border-top {
+	border-top: 0.05rem solid var(--clr-6);
+}
+
+.border-bottom {
+	border-bottom: 0.05rem solid var(--clr-6);
+}
+
+.padding-2 {
+	padding: 2rem;
+}
+
+.w100p {
+	width: 100%;
+}
+
+.wrapper {
+	width: 60rem;
+}
