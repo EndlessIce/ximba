@@ -1,7 +1,9 @@
 import { postsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid'
 
-savePostsDataToLocalStorage(postsData)
+if (getPostsDataFromLocalStorage() === false) {
+	savePostsDataToLocalStorage(postsData)
+}
 render()
 
 document.addEventListener('click', function (e) {
